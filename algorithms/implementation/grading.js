@@ -21,7 +21,7 @@ function readLine() {
 /////////////// ignore above this line ////////////////////
 
 function solve(grades){
-  console.log(grades.map((el) => (el < 38 || el % 5 < 3 ? el : el + (5 - el % 5))).join("\n"))
+  return grades.map(el => (el < 38 || el % 5 < 3 ? el : (5 - (el % 5) + el))).join("\n")
 }
 
 function main() {
@@ -31,5 +31,7 @@ function main() {
        grades[grades_i] = parseInt(readLine());
     }
     var result = solve(grades);
+    process.stdout.write(""+result+"\n");
+
 }
 
