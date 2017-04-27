@@ -20,7 +20,7 @@ function readLine() {
 
 /////////////// ignore above this line ////////////////////
 
-function catchesUp(faster, slower) {
+function step(faster, slower) {
   faster.pos += faster.v
   slower.pos += slower.v
   if (faster.pos > slower.pos) {
@@ -28,7 +28,7 @@ function catchesUp(faster, slower) {
   } else if (faster.pos === slower.pos) {
     console.log("YES")
   } else {
-    catchesUp(faster, slower)
+    step(faster, slower)
   }
 }
 
@@ -56,7 +56,7 @@ function main() {
    } else if (faster.pos > slower.pos) {
      console.log("NO")
    } else {
-     catchesUp(faster, slower)
+     step(faster, slower)
    }
 }
 
