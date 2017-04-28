@@ -1,5 +1,4 @@
-
-ss.stdin.resume();
+process.stdin.resume();
 process.stdin.setEncoding('ascii');
 
 var input_stdin = "";
