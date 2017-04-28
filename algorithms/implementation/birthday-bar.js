@@ -21,7 +21,12 @@ function readLine() {
 /////////////// ignore above this line ////////////////////
 
 function getWays(squares, d, m){
-    // Complete this function
+  var ways = 0
+  for (i = 0; i < squares.length - m + 1; i++) {
+    let sum = squares.slice(i, i + m).reduce((agg, el) => agg + el)
+    if (sum == d) { ways++ }
+  }
+  return ways
 }
 
 function main() {
@@ -32,7 +37,7 @@ function main() {
     var d = parseInt(d_temp[0]);
     var m = parseInt(d_temp[1]);
     var result = getWays(s, d, m);
-    Console.log(result);
+    console.log(result);
 
 }
 
